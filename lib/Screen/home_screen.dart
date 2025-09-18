@@ -13,7 +13,7 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'My Tasks',
+          'My Task',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
         centerTitle: true,
