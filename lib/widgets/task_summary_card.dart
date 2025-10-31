@@ -7,9 +7,8 @@ class TaskSummaryCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // This widget only listens to the summaryProvider, so it will only
-    // rebuild when the summary string changes.
-    final summary = ref.watch(summaryProvider);
+    // 1. Watch the summaryProvider. It now returns an AsyncValue<String>
+    final summaryAsyncValue = ref.watch(summaryProvider);
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -33,14 +32,34 @@ class TaskSummaryCard extends ConsumerWidget {
         children: [
           const Text(
             'Tasks Completed',
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(
+                fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
           ),
-          Text(
-            summary, // Data comes from the provider
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          // 2. Use .when() to handle the loading/error/data states
+          summaryAsyncValue.when(
+            // 2a. Data is available
+            data: (summary) => Text(
+              summary, // This is the '1 / 3' string
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            // 2b. An error occurred
+            error: (e, st) => const Icon(
+              Icons.error_outline,
+              color: Colors.redAccent,
+              size: 24,
+            ),
+            // 2c. Data is loading
+            loading: () => const SizedBox(
+              height: 20,
+              width: 20,
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                color: Colors.white,
+              ),
             ),
           ),
         ],

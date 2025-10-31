@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ui/Screen/home_screen.dart'; // <-- UPDATE with your app name
+import 'package:ui/screen/home_screen.dart'; // <-- UPDATE with your app name
 
 void main() {
   // ProviderScope is what allows all the widgets in the app to access providers.
