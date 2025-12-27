@@ -1,6 +1,6 @@
 # ui
 
-A new Flutter project.
+this project was created to make users can easily manage their own task, goals or maybe their projects within one app that also have streak features to motivate the user to do their task everyday 
 
 ## Getting Started
 
@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## Main Feature
+- Heatmap: to visualise how active the user is using the green gradient colour ranging from dark green as minimal activity and light green as alot of activity is happening
+- Streak: to see users daily activity, do they do the task that they set ? or do they procastinate on their projects ?.
+- Yearly/monthly recap: to see average daily activity within a year or a month where the user can change the timespan according to their favour
