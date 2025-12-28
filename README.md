@@ -15,6 +15,9 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+To re-build the task-provider.g.dart use the following code:
+flutter pub run build_runner build --delete-conflicting-outputs
+
 
 ## Main Feature
 - Heatmap: to visualise how active the user is using the green gradient colour ranging from dark green as minimal activity and light green as alot of activity is happening
