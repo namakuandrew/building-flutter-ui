@@ -1,4 +1,4 @@
-# ui
+# TASK MANAGEMENT APP
 
 this project was created to make users can easily manage their own task, goals or maybe their projects within one app that also have streak features to motivate the user to do their task everyday 
 
